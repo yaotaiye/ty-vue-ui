@@ -1,0 +1,31 @@
+.ty-button-group>.ty-button+.ty-button {
+  margin-left: 0;
+}
+.ty-button-group .ty-button:first-child {
+  border-right-color: hsla(0,0%,100%,.5);
+}
+.ty-button-group>.ty-button:not(:last-child) {
+  margin-right: -1px;
+}
+.ty-button-group>.ty-button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.ty-button-group .ty-button:last-child {
+  border-left-color: hsla(0,0%,100%,.5);
+}
+.ty-button-group>.ty-button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.ty-button-group .ty-button:not(:first-child):not(:last-child) {
+  border-left-color: hsla(0,0%,100%,.5);
+  border-right-color: hsla(0,0%,100%,.5);
+}
+.ty-button-group>.ty-button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.ty-button-group>.ty-button {
+  float: left;
+  position: relative;
+}

@@ -1,0 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;}
+.red{color: red;}
+.baidu{
+    height: 120px;
+    background:url("http://hao1.91nzh.com/static/images/bd_logo1.png") no-repeat;
+}
