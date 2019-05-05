@@ -9,12 +9,9 @@
                 <li class="nav-list"> <router-link to="/date" >时间控件</router-link></li>
                 <li class="nav-list"> <router-link to="/icon" >图标</router-link></li>
                 <li class="nav-list"> <router-link to="/dialog" >dialog 弹框</router-link></li>
+                <li class="nav-list"> <router-link to="/upload" >文件上传</router-link></li>
             </ul>
         </div>
-
-
-
-
 
 
     </div>
@@ -29,6 +26,7 @@
             return{
                 dialogVisible: false
                 ,modal:false
+                ,fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}]
             }
         },
         mounted:function () {
@@ -36,18 +34,24 @@
 
         },
         methods:{
-            open () {
-                 console.log('open');
-             },
-            close () {
-                console.log('close');
+            handleRemove(file, fileList) {
+                console.log(file, fileList);
             },
-            opened(){
-                console.log('opened');
+            handlePreview(file) {
+                console.log(file);
+            },
+            handleExceed(files, fileList) {
+                console.log(`${files.length + fileList.length} 个文件`)
+            },
+            beforeRemove(file, fileList) {
+                console.log(`确定移除 ${ file.name }？`)
+               // return this.$confirm(`确定移除 ${ file.name }？`);
+            },
+            handleChange(file, fileList) {
+               // console.log(file)
             }
-            ,closed(){
-                console.log('closed')
-            }
+
+
         }
     }
 </script>

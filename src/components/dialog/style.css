@@ -1,4 +1,4 @@
-.el-dialog__wrapper {
+.ty-dialog__wrapper {
   position: fixed;
   top: 0;
   right: 0;
@@ -7,7 +7,7 @@
   overflow: auto;
   margin: 0;
 }
-.el-dialog {
+.ty-dialog {
   position: relative;
   margin: 0 auto 50px;
   background: #fff;
@@ -16,15 +16,15 @@
   box-sizing: border-box;
   width: 50%;
 }
-.el-dialog__header {
+.ty-dialog__header {
   padding: 20px 20px 10px;
 }
-.el-dialog__title {
+.ty-dialog__title {
   line-height: 24px;
   font-size: 18px;
   color: #303133;
 }
-.el-dialog__headerbtn {
+.ty-dialog__headerbtn {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -35,12 +35,12 @@
   cursor: pointer;
   font-size: 16px;
 }
-.el-dialog__body {
+.ty-dialog__body {
   padding: 30px 20px;
   color: #606266;
   font-size: 14px;
 }
-.el-dialog__footer {
+.ty-dialog__footer {
   padding: 10px 20px 20px;
   text-align: right;
   box-sizing: border-box;
@@ -71,13 +71,13 @@ dialog-fade-enter-active {
     opacity: 0;
   }
 }
-.el-dialog--center {
+.ty-dialog--center {
   text-align: center;
 }
-.el-dialog--center .el-dialog__footer {
+.ty-dialog--center .ty-dialog__footer {
   text-align: inherit;
 }
-.el-dialog--center .el-dialog__body {
+.ty-dialog--center .ty-dialog__body {
   text-align: initial;
   padding: 25px 25px 30px;
 }

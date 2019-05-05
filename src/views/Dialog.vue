@@ -2,43 +2,69 @@
     <div>
         <div class="title">TyDialog弹框组件使用</div>
         <div class="describe">
-            <table>
+            <table class="ty-table">
+                <thead>
+                 <tr>
+                     <th>参数</th>
+                     <th>说明</th>
+                     <th>类型</th>
+                     <th>默认值</th>
+                 </tr>
+                </thead>
              <tbody>
                  <tr>
                      <td>@open</td>
                      <td>弹框打开回调函数</td>
+                     <td>Function</td>
+                     <td>--</td>
                  </tr>
                  <tr>
                      <td>@close</td>
                      <td>弹框关闭回调函数</td>
+                     <td>Function</td>
+                     <td>--</td>
                  </tr>
                  <tr>
                      <td>@opened</td>
                      <td>弹框打开动画开始回调函数</td>
+                     <td>Function</td>
+                     <td>--</td>
                  </tr>
                  <tr>
                      <td>@closed</td>
                      <td>弹框关闭动画结束回调函数</td>
+                     <td>Function</td>
+                     <td>--</td>
                  </tr>
                  <tr>
                      <td>modal</td>
                      <td>布尔类型，是否开启遮罩层</td>
+                     <td>Boolean</td>
+                     <td>true</td>
                  </tr>
                  <tr>
                      <td>center</td>
                      <td>布尔类型，是否标题按钮居中显示</td>
+                     <td>Boolean</td>
+                     <td>false</td>
                  </tr>
                  <tr>
                      <td>title</td>
                      <td>标题</td>
+                     <td>String</td>
+                     <td>--</td>
                  </tr>
                  <tr>
                      <td>width</td>
                      <td>弹框宽度</td>
+                     <td>String</td>
+                     <td>--</td>
                  </tr>
                  <tr>
                      <td>visible</td>
                      <td>布尔类型，控制弹框显示</td>
+                     <td>Boolean</td>
+                     <td>false</td>
                  </tr>
 
 

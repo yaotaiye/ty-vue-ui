@@ -35,6 +35,11 @@ const routes =  [
         name: 'dialog',
         component:resolve => require(['./views/Dialog.vue'],resolve)
     },
+    {
+        path: '/upload',
+        name: 'upload',
+        component:resolve => require(['./views/Upload.vue'],resolve)
+    },
 ];
 var router=new Router({
     routes:routes
