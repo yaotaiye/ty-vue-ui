@@ -1,5 +1,46 @@
 <template>
    <div>
+       <table class="ty-table">
+           <thead>
+           <tr>
+               <th>参数</th>
+               <th>说明</th>
+               <th>类型</th>
+               <th>可选值</th>
+               <th>默认值</th>
+           </tr>
+           </thead>
+           <tbody>
+           <tr>
+               <td>col</td>
+               <td>网格比例</td>
+               <td>string</td>
+               <td>1/2/3/4/5/6/7/8/9/10/11</td>
+               <td>---</td>
+           </tr>
+           <tr>
+               <td>gridSpace</td>
+               <td>网格间隙</td>
+               <td>string</td>
+               <td>10/15/20</td>
+               <td>---</td>
+           </tr>
+           <tr>
+               <td>justifyContent</td>
+               <td>网格水平内容分布</td>
+               <td>string</td>
+               <td>start/center/end/between/around</td>
+               <td>---</td>
+           </tr>
+           <tr>
+               <td>alignIitems</td>
+               <td>网格垂直内容分布</td>
+               <td>string</td>
+               <td>start/center/end/baseline/stretch</td>
+               <td>---</td>
+           </tr>
+           </tbody>
+       </table>
        <div class="title">固定网格</div>
        <p class="describe">
            整个网格系统，一共12格子,通过设置TyCol的 col 属性值，可按比例划分网格。

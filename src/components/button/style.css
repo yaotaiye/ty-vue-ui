@@ -31,6 +31,10 @@
 .ty-button:hover {
   opacity: .5;
 }
+.ty-button.is-circle {
+  border-radius: 50%;
+  padding: 12px;
+}
 .ty-button--primary {
   color: #fff;
   background-color: #409eff;

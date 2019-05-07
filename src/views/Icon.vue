@@ -1,6 +1,26 @@
 <template>
     <div>
         <div class="title">图标使用</div>
+        <table class="ty-table">
+            <thead>
+            <tr>
+                <th>参数</th>
+                <th>说明</th>
+                <th>类型</th>
+                <th>可选值</th>
+                <th>默认值</th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>name</td>
+                  <td>图标名称</td>
+                  <td>string</td>
+                  <td>---</td>
+                  <td>---</td>
+              </tr>
+            </tbody>
+        </table>
         <p class="describe">
             设置TyIcon组件的属性 name="icon-all"
         </p>
