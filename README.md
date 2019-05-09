@@ -5,9 +5,9 @@
 # vue项目引用插件
 在vue项目的main.js,引用插件。
 # 完整引用方式
-import TyDesignVue from 'ty-design-vue';
-Vue.use(TyDesignVue);
-import 'ty-design-vue/lib/style.css';
+import TyDesignVue from 'ty-design-vue';  
+Vue.use(TyDesignVue);  
+import 'ty-design-vue/lib/style.css';  
 # 部分引入方式
 import {TyButton,TyButtonGroup,TyRow,TyCol,TyPicker,TyDialog,TyIcon} from './components/index.js';  
 import './components/button/style.css';  
