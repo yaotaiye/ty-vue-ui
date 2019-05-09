@@ -10,8 +10,10 @@
                 <li class="nav-list"> <router-link to="/icon" >图标</router-link></li>
                 <li class="nav-list"> <router-link to="/dialog" >dialog 弹框</router-link></li>
                 <li class="nav-list"> <router-link to="/upload" >文件上传</router-link></li>
+                <li class="nav-list"> <router-link to="/pagination" >分页</router-link></li>
             </ul>
         </div>
+
 
 
     </div>
@@ -49,8 +51,10 @@
             },
             handleChange(file, fileList) {
                // console.log(file)
+            },
+            pageChange(n){
+                console.log(n)
             }
-
 
         }
     }

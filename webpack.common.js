@@ -14,7 +14,8 @@
              new VueLoaderPlugin() //vue 文件加载器最新用法
        ],
        output: {
-             filename: '[name].bundle.[hash].js'
+             //filename: '[name].bundle.[hash].js'
+             filename: '[name].bundle.js'
             ,path: path.resolve(__dirname, 'dist')
           //  ,library: 'jquery' //暴露一个全局变量jquery，在程序中便可以使用require('jquery')或者 import jquery from 'jquery'
             ,libraryTarget: 'umd'//在 AMD 或 CommonJS require 之后可访问

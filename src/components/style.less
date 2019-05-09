@@ -1028,4 +1028,127 @@ dialog-fade-enter-active {
 .icon-tools-hardware:before {
   content: "\e882";
 }
+//pagination
+.ty-pagination {
+  white-space: nowrap;
+  padding: 2px 5px;
+  color: #303133;
+  font-weight: 700;
+}
+.ty-pager {
+  user-select: none;
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+  li {
+    padding: 0 4px;
+    background: #fff;
+    vertical-align: top;
+    display: inline-block;
+    font-size: 13px;
+    min-width: 35.5px;
+    height: 28px;
+    line-height: 28px;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+   &.active {
+      color: #409eff;
+      cursor: default;
+    }
+  }
+}
+.ty-pagination.is-background .btn-next, .ty-pagination.is-background .btn-prev, .ty-pagination.is-background .ty-pager li {
+  margin: 0 5px;
+  background-color: #f4f4f5;
+  color: #606266;
+  min-width: 30px;
+  border-radius: 2px;
+}
+.ty-pager li.active+li {
+  border-left: 0;
+}
+.ty-pagination button {
+  border: none;
+  padding: 0 6px;
+  background: transparent;
+}
+.ty-pagination button, .ty-pagination span:not([class*=suffix]) {
+  display: inline-block;
+  font-size: 13px;
+  min-width: 35.5px;
+  height: 28px;
+  line-height: 28px;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+.ty-pagination .btn-next, .ty-pagination .btn-prev {
+  background: 50% no-repeat;
+  background-size: 16px;
+  background-color: #fff;
+  cursor: pointer;
+  margin: 0;
+  color: #303133;
+}
+.ty-pagination button:disabled {
+  color: #c0c4cc;
+  background-color: #fff;
+  cursor: not-allowed;
+}
+
+.ty-pagination .btn-prev {
+  padding-right: 12px;
+}
+.ty-pagination.is-background .btn-next:disabled, .ty-pagination.is-background .btn-prev:disabled {
+  color: #c0c4cc;
+}
+.ty-pagination.is-background .btn-next, .ty-pagination.is-background .btn-prev {
+  padding: 0;
+}
+.ty-pagination.is-background .btn-next, .ty-pagination.is-background .btn-prev, .ty-pagination.is-background .ty-pager li {
+  margin: 0 5px;
+  background-color: #f4f4f5;
+  color: #606266;
+  min-width: 30px;
+  border-radius: 2px;
+}
+.ty-pagination.is-background .ty-pager li:not(.disabled).active {
+  background-color: #409eff;
+  color: #fff;
+}
+.ty-pagination__jump {
+  margin: 0px 10px;
+  font-weight: 400;
+  color: #606266;
+  input {
+    text-align: center;
+    height: 26px;
+    line-height: 26px;
+    position: relative;
+    font-size: 14px;
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #dcdfe6;
+  }
+  .submit{
+    cursor: pointer;
+    border-radius: 2px;
+    margin-left:5px;
+    text-align: center;
+
+  }
+}
+.ty-pagination.is-background .submit{
+  background-color: #409eff;
+  color: #fff;
+}
+.ty-pagination__total {
+  margin-right: 10px;
+  font-weight: 400;
+  color: #606266;
+}
 

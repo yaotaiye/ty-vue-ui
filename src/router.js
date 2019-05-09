@@ -40,6 +40,11 @@ const routes =  [
         name: 'upload',
         component:resolve => require(['./views/Upload.vue'],resolve)
     },
+    {
+        path: '/pagination',
+        name: 'pagination',
+        component:resolve => require(['./views/Pagination.vue'],resolve)
+    },
 ];
 var router=new Router({
     routes:routes

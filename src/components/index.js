@@ -7,6 +7,7 @@ import {default as TyPicker } from './date-picker/index';
 import {default as TyDialog } from './dialog/index';
 import {default as TyIcon } from './icon/index';
 import {default as TyUpload } from './upload/index.js';
+import {default as TyPagination } from './pagination/index.js';
 
 const components = [
      TyButton
@@ -17,6 +18,7 @@ const components = [
     ,TyDialog
     ,TyIcon
     ,TyUpload
+    ,TyPagination
 ];
 const install = function(Vue, opts = {}) {
 
@@ -54,6 +56,7 @@ export {
     ,TyDialog
     ,TyIcon
     ,TyUpload
+    ,TyPagination
 }
 export default {
     version: '1.0.0',
