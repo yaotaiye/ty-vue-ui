@@ -1,5 +1,5 @@
 # ty-design-vue
-仿造饿了么UI，基于vue框架，构建一套UI插件。
+参考饿了么UI，基于vue框架，构建一套UI框架。
 # 插件安装
  npm install ty-design-vue --save。
 # vue项目引用插件
