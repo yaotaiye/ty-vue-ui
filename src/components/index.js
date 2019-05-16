@@ -1,4 +1,5 @@
 //将输出名字为default的组件更改 TyButton
+import {default as TyInput } from './input/index';
 import {default as TyButton } from './button/index';
 import {default as TyButtonGroup } from './button-group/index';
 import {default as TyRow } from './row/index';
@@ -8,9 +9,11 @@ import {default as TyDialog } from './dialog/index';
 import {default as TyIcon } from './icon/index';
 import {default as TyUpload } from './upload/index.js';
 import {default as TyPagination } from './pagination/index.js';
+import {default as TySelect } from './select/index.js';
 
 const components = [
-     TyButton
+     TyInput
+    ,TyButton
     ,TyButtonGroup
     ,TyRow
     ,TyCol
@@ -19,6 +22,7 @@ const components = [
     ,TyIcon
     ,TyUpload
     ,TyPagination
+    ,TySelect
 ];
 const install = function(Vue, opts = {}) {
 
@@ -48,7 +52,8 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export {
-     TyButton
+    TyInput
+    ,TyButton
     ,TyButtonGroup
     ,TyRow
     ,TyCol
@@ -57,6 +62,7 @@ export {
     ,TyIcon
     ,TyUpload
     ,TyPagination
+    ,TySelect
 }
 export default {
     version: '1.0.0',

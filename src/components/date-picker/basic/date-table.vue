@@ -89,7 +89,7 @@
 
             }
             ,render(){
-                this.chooseDay=this.date.getDate();
+                this.chooseDay=this.lastDate.getDate();
                 this.rows=  this.fillDate(this.date.getFullYear(),this.date.getMonth());
             }
             ,handleDatePick(event){

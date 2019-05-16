@@ -45,6 +45,11 @@ const routes =  [
         name: 'pagination',
         component:resolve => require(['./views/Pagination.vue'],resolve)
     },
+    {
+        path: '/input',
+        name: 'input',
+        component:resolve => require(['./views/Input.vue'],resolve)
+    },
 ];
 var router=new Router({
     routes:routes
