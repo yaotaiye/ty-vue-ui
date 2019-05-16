@@ -1,5 +1,5 @@
 # ty-design-vue
-仿造饿了么UI，基于vue框架，构建一套UI插件。
+参考饿了么UI，基于vue框架，构建一套UI框架。
 # 插件安装
  npm install ty-design-vue --save。
 # vue项目引用插件
@@ -25,7 +25,7 @@ Vue.use(TyDialog);
 import './components/icon/font/iconfont.css';  
 Vue.use(TyIcon);  
 # 使用示例
-在views文件中，有各个组件详细的使用方法。https://github.com/yaotaiye/ty-vue-ui/tree/master/src/views
+在views文件中，有各个组件使用案例代码（https://github.com/yaotaiye/ty-vue-ui/tree/master/src/views）
 # 组件预览地址
-https://yaotaiye.github.io/ty-vue-ui/dist/index.html#/
+组件参数说明及效果预览地址（https://yaotaiye.github.io/ty-vue-ui/dist/index.html#/）
 
