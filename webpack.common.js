@@ -1,16 +1,14 @@
  const path = require('path');
- const CleanWebpackPlugin = require('clean-webpack-plugin');
+// const CleanWebpackPlugin = require('clean-webpack-plugin');
  const HtmlWebpackPlugin = require('html-webpack-plugin');
  const VueLoaderPlugin = require('vue-loader/lib/plugin');
  const webpack = require('webpack');
-
- //const vueLoaderConfig=require('vue-loader.conf')
  module.exports = {
        entry: {
           app: './src/main.js'
        },
        plugins: [
-             //new CleanWebpackPlugin(), //清空dist
+            // new CleanWebpackPlugin(), //清空dist
              new HtmlWebpackPlugin({ template: './src/public/index.html' }), //加载首页,生成index.html
              new VueLoaderPlugin() //vue 文件加载器最新用法
        ],
