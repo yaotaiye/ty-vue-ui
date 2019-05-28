@@ -12,10 +12,11 @@
                 <li class="nav-list"> <router-link to="/dialog" >dialog 弹框</router-link></li>
                 <li class="nav-list"> <router-link to="/upload" >文件上传</router-link></li>
                 <li class="nav-list"> <router-link to="/pagination" >分页</router-link></li>
+                <li class="nav-list"> <router-link to="/select" >下拉框</router-link></li>
 
             </ul>
         </div>
-  <!-- <ty-select></ty-select>-->
+
 
 
     </div>
@@ -28,10 +29,41 @@
         name: "Home",
         data(){
             return{
-                text:'asdas'
-                ,dialogVisible: false
-                ,modal:false
-                ,fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}]
+                options: [
+                {
+                    value: '选项1',
+                    label: '黄金糕'
+                }, {
+                    value: '选项2',
+                    label: '双皮奶'
+                }, {
+                    value: '选项3',
+                    label: '蚵仔煎'
+                }, {
+                    value: '选项4',
+                    label: '龙须面'
+                }, {
+                    value: '选项5',
+                    label: '北京烤鸭'
+                },
+                {
+                    value: '选项6',
+                    label: '黄金糕'
+                }, {
+                    value: '选项7',
+                    label: '双皮奶'
+                }, {
+                    value: '选项8',
+                    label: '蚵仔煎'
+                }, {
+                    value: '选项9',
+                    label: '龙须面'
+                }, {
+                    value: '选项10',
+                    label: '北京烤鸭'
+                },
+
+                ],
             }
         },
         mounted:function () {
@@ -44,7 +76,11 @@
             },
             blur(e){console.log('blur：'+e)},
             focus(e){console.log('focus：'+e)},
-            change(e){console.log('change：'+e)},
+            change(e){
+                console.log('change：'+e);
+                this.text=e;
+
+            },
 
         }
     }

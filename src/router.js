@@ -50,6 +50,11 @@ const routes =  [
         name: 'input',
         component:resolve => require(['./views/Input.vue'],resolve)
     },
+    {
+        path: '/select',
+        name: 'select',
+        component:resolve => require(['./views/Select.vue'],resolve)
+    },
 ];
 var router=new Router({
     routes:routes

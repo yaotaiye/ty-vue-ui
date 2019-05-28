@@ -68,6 +68,13 @@
                   <td>--</td>
               </tr>
               <tr>
+                  <td>clearable</td>
+                  <td>是否可清空	</td>
+                  <td>boolean</td>
+                  <td>--</td>
+                  <td>false</td>
+              </tr>
+              <tr>
                   <td>blur</td>
                   <td>在 Input 失去焦点时触发</td>
                   <td>function</td>
@@ -97,7 +104,10 @@
               </tr>
             </tbody>
         </table>
-        <ty-input v-model="text" autocomplete="on" placeholder="请输入内容" clearable @input="input" @blur="blur" @focus="focus" @change="change" size="small" prefixIcon="icon-calendar" suffixIcon="icon-calendar"></ty-input>
+        <ty-input v-model="text" autocomplete="on" name="test" placeholder="请输入内容" clearable @input="input" @blur="blur" @focus="focus" @change="change" size="small" prefixIcon="icon-calendar" >
+            <!-- slot 方式传入图标-->
+            <i slot="suffix" class="ty-input__icon iconfont icon-calendar"></i>
+        </ty-input>
     </div>
 </template>
 
@@ -111,6 +121,8 @@
         },
         mounted:function () {
             //  this.test();
+            this.text='asdjakh';
+            console.log(this.text)
 
         },
         methods:{
