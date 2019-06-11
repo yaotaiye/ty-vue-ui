@@ -83,7 +83,7 @@
 
 <script>
     export default {
-        name: "Image",
+        name: "Pics",
         data(){
             return{
                 fits: ['fill', 'contain', 'cover', 'none', 'scale-down'],

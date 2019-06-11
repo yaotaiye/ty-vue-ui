@@ -55,6 +55,11 @@ const routes =  [
         name: 'select',
         component:resolve => require(['./views/Select.vue'],resolve)
     },
+    {
+        path: '/image',
+        name: 'image',
+        component:resolve => require(['./views/Pics.vue'],resolve)
+    },
 ];
 var router=new Router({
     routes:routes

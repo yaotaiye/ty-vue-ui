@@ -56,15 +56,15 @@
             <tr>
                 <td>select</td>
                 <td>选项点击钩子</td>
-                <td>event(val) </td>
-                <td>--</td>
+                <td>function </td>
+                <td>event(val)</td>
                 <td>--</td>
             </tr>
             <tr>
                 <td>change</td>
                 <td>选择框值change钩子</td>
-                <td>event(val) </td>
-                <td>--</td>
+                <td> function</td>
+                <td>event(val)</td>
                 <td>--</td>
             </tr>
 
