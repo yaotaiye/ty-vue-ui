@@ -25,7 +25,7 @@ Vue.use(TyDialog);
 import './components/icon/font/iconfont.css';  
 Vue.use(TyIcon);  
 # 使用示例
-在views文件中，有各个组件使用案例代码（https://github.com/yaotaiye/ty-vue-ui/tree/master/src/views）
+在views文件中，有各个组件使用案例代码（ https://github.com/yaotaiye/ty-vue-ui/tree/master/src/views ）
 # 组件预览地址
 组件参数说明及效果预览地址（https://yaotaiye.github.io/ty-vue-ui/dist/index.html#/）
 
