@@ -3,14 +3,46 @@
  const HtmlWebpackPlugin = require('html-webpack-plugin');
  const VueLoaderPlugin = require('vue-loader/lib/plugin');
  const webpack = require('webpack');
+ //解析、编译速度优化
+ const os = require('os');
+ const ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin');
+ const HappyPack = require('happypack');
+ const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length });
+ const createHappyPlugin = (id, loaders) => new HappyPack({
+     id: id,
+     loaders: loaders,
+     threadPool: happyThreadPool,
+     verbose: process.env.HAPPY_VERBOSE === '1' // make happy more verbose with HAPPY_VERBOSE=1
+ });
  module.exports = {
        entry: {
           app: './src/main.js'
        },
-       plugins: [
+     resolve: {
+         mainFields: ['main'], // 只采用main字段作为入口文件描述字段，减少搜索步骤
+     },
+     plugins: [
             // new CleanWebpackPlugin(), //清空dist
-             new HtmlWebpackPlugin({ template: './src/public/index.html' }), //加载首页,生成index.html
-             new VueLoaderPlugin() //vue 文件加载器最新用法
+              new HtmlWebpackPlugin({ template: './src/public/index.html' }) //加载首页,生成index.html
+             ,new VueLoaderPlugin() //vue 文件加载器最新用法
+             ,createHappyPlugin('happy-babel', [{
+                 loader: 'babel-loader',
+                 options: {
+                     babelrc: true,
+                     cacheDirectory: true // 启用缓存
+                 }
+             }])
+             ,createHappyPlugin('happy-css', ['css-loader', 'vue-style-loader'])
+             ,new HappyPack({
+                 loaders: [{
+                     path: 'vue-loader',
+                     query: {
+                         loaders: {
+                             less: 'vue-style-loader!css-loader!postcss-loader!sass-loader?indentedSyntax'
+                         }
+                     }
+                 }]
+             })
        ],
        output: {
              //filename: '[name].bundle.[hash].js'
@@ -26,10 +58,28 @@
        optimization: { //防止重复，提取公共的部分，分离代码
           splitChunks: {
             chunks: 'all'
-          }
+          },
+           minimizer: [
+               new ParallelUglifyPlugin({ // 多进程压缩,实现并发编译，提升压缩速度
+                   cacheDir: '.cache/',
+                   uglifyJS: {
+                       output: {
+                           comments: false,
+                           beautify: false
+                       },
+                       compress: {
+                           warnings: false,
+                           drop_console: true,
+                           collapse_vars: true,
+                           reduce_vars: true
+                       }
+                   }
+               }),
+           ]
         },
        module: {
-             rules: [
+           noParse: /jquery|lodash/,// 忽略未采用模块化的文件，因此jquery或lodash将不会被下面的loaders解析
+           rules: [
                  {
                      test: /\.css$/,
                      use: [
