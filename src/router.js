@@ -60,6 +60,11 @@ const routes =  [
         name: 'image',
         component:resolve => require(['./views/Pics.vue'],resolve)
     },
+    {
+        path: '/backtop',
+        name: 'backtop',
+        component:resolve => require(['./views/Backtop.vue'],resolve)
+    },
 ];
 var router=new Router({
     routes:routes

@@ -11,6 +11,7 @@ import {default as TyUpload } from './upload/index.js';
 import {default as TyPagination } from './pagination/index.js';
 import {default as TySelect } from './select/index.js';
 import {default as TyImage } from './image/index.js';
+import {default as TyBacktop } from './back-top/index.js';
 
 const components = [
      TyInput
@@ -25,6 +26,7 @@ const components = [
     ,TyPagination
     ,TySelect
     ,TyImage
+    ,TyBacktop
 ];
 const install = function(Vue, opts = {}) {
 
@@ -66,6 +68,7 @@ export {
     ,TyPagination
     ,TySelect
     ,TyImage
+    ,TyBacktop
 }
 export default {
     version: '1.0.0',

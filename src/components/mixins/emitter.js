@@ -1,3 +1,4 @@
+//先通过$on在当前组件绑定事件，再通过获取父或子组件的$emit来触发调用
 function broadcast(componentName, eventName, params) {
     this.$children.forEach(child => {
         var name = child.$options.componentName;
@@ -11,6 +12,7 @@ function broadcast(componentName, eventName, params) {
 }
 export default {
     methods: {
+        //子组件触发父组件方法
         dispatch(componentName, eventName, params) {
             var parent = this.$parent || this.$root;
             var name = parent.$options.componentName;
@@ -26,6 +28,7 @@ export default {
                 parent.$emit.apply(parent, [eventName].concat(params));
             }
         },
+        //父组件触发子组件方法
         broadcast(componentName, eventName, params) {
             broadcast.call(this, componentName, eventName, params);
         }

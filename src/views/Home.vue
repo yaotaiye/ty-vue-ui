@@ -14,6 +14,7 @@
                 <li class="nav-list"> <router-link to="/pagination" >分页</router-link></li>
                 <li class="nav-list"> <router-link to="/select" >下拉框</router-link></li>
                 <li class="nav-list"> <router-link to="/image" >image</router-link></li>
+                <li class="nav-list"> <router-link to="/backtop" >返回顶部</router-link></li>
 
             </ul>
         </div>
